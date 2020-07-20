@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Infinity App</title>
+      <style>
+         /* Add some padding on document's body to prevent the content
+         to go underneath the header and footer */
+         body {
+         padding-top: 60px;
+         }
+         /* Full-width input fields */
+         input[type=text],
+         input[type=password] {
+         width: 100%;
+         padding: 15px;
+         margin: 5px 0 22px 0;
+         display: inline-block;
+         border: none;
+         background: #f1f1f1;
+         }
+         input[type=text]:focus,
+         input[type=password]:focus {
+         background-color: #ddd;
+         outline: none;
+         }
+         /* Overwrite default styles of hr */
+         hr {
+         border: 1px solid #f1f1f1;
+         margin-bottom: 25px;
+         }
+         /* Set a style for the submit button */
+         .registerbtn {
+         background-color: #1a2782;
+         color: white;
+         padding: 16px 20px;
+         border: none;
+         cursor: pointer;
+         width: 30%;
+         opacity: 0.8;
+         border-radius: 6px;
+         }
+         .registerbtn:hover {
+         opacity: 1;
+         }
+         /* Add a blue text color to links */
+         a {
+         color: dodgerblue;
+         }
+         /* Set a grey background color and center the text of the "sign in" section */
+         .signin {
+         background-color: #f1f1f1;
+         text-align: center;
+         }
+         .fixed-header,
+         .fixed-footer {
+            padding: 15px;
+         width: 100%;
+         background: #31a9ce;
+         color: #fff;
+         margin-left: -8px;
+         }
+         .fixed-header {
+            position: fixed;
+            top: 0;
+            font-size: 160%;
+         }
+         .fixed-footer {
+            bottom: 0;
+            height: 40px;
+            padding-right: 0px;
+         }
+         .container {
+            font-family: Helvetica;   
+            margin: 0 auto;
+         }
+         nav a{
+         color: white;
+         padding: 10px 15px;
+         display: inline-block;
+         text-decoration: none;
+         font-size: large;
+         }
+      </style>
+      <script type="text/javascript" src="participants.js"></script>	
+   </head>
+   <body>
+      <div class="fixed-header">
+         <div class="container" style="display:inline;font-weight:bold;">Welcome to Infinity app</div>
+         <div class="container" style="display:inline;float:right;padding-right:35px;">
+            <nav>
+              <a href="index.html">Dashboard</a>
+              <a href="register.html">Register</a>
+              <a href="judges.html">Judges</a>
+              <a href="participants.html">Participants</a></nav>
+         </div>
+      </div>
+      <div class="container" style="width:40%;font-size:16px;padding-top:2;margin-bottom: 20px;">
+         <form id="registration-form" onSubmit="addParticipant()">
+           <div class="container">
+             <h1 style="font-size:20px;font-weight:bold;">Registration Form</h1>
+             <p>Please fill in this form to participate in Infinity.</p>
+             <hr>
+             <label for="employee-id"><b>Employee ID</b></label>
+             <input type="text" placeholder="Enter Employee ID" name="employee-id" id="employee-id" required>
+             <label for="name"><b>Name</b></label>
+             <input type="text" placeholder="Enter Name" name="name" id="name" required>
+             <label for="team-name"><b>Team Name</b></label>
+             <input type="text" placeholder="Enter Team Name" name="team-name" id="team-name" required>
+             <label for="team-size"><b>Team Size</b></label>&nbsp;<label for="optional">(Optional)</label>
+             <input type="text" placeholder="Enter Team Size" name="team-size" id="team-size">
+             <label for="location"><b>Location</b></label>
+             <input type="text" placeholder="Enter Location" name="location" id="location" required>
+             <hr>
+             <button type="submit" class="registerbtn">Register</button>
+           </div>
+         </form>
+      </div>
+      <div class="fixed-footer">
+         <div class="container" style="display:inline;">Copyright @Pramati Technologies Pvt Ltd - 2020</div>
+         <div class="container" style="display:inline;float:right;padding-right:25px;">
+            <nav><a href=#>Contact Us</a></nav>
+         </div>
+      </div>
+      </head>
+   </body>
+</html>

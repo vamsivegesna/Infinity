@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Infinity App</title>
+      <style>
+         /* Add some padding on document's body to prevent the content
+         to go underneath the header and footer */
+         body{        
+         padding-top: 60px;
+         padding-bottom: 40px;
+         }
+         .fixed-header, .fixed-footer{
+         width: 100%;
+         background: #31a9ce;
+         color: #fff;
+         margin-left: -8px;
+         }
+         .fixed-header {
+            position: fixed;
+            top: 0;
+            font-size: 160%;
+            padding: 15px;
+         }
+         .fixed-footer {
+            position: absolute;
+            bottom: 0;
+            height: 40px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+         }
+         .container {
+            font-family: Helvetica;   
+            margin: 0 auto;
+         }
+         nav a{
+         color: white;
+         padding: 10px 15px;
+         display: inline-block;
+         text-decoration: none;
+         font-size: large;
+         }
+      </style>
+      <script type="text/javascript" src="participants.js"></script>
+   </head>
+   <body>
+      <div class="fixed-header">
+         <div class="container" style="display:inline;font-weight:bold;">Welcome to Infinity app</div>
+         <div class="container" style="display:inline;float:right;padding-right:35px;">
+            <nav>
+               <a href="index.html">Dashboard</a>
+               <a href="register.html">Register</a>
+               <a href="judges.html">Judges</a>
+               <a href="participants.html">Participants</a>
+            </nav>
+         </div>
+      </div>
+      <div class="container" style="padding-top:2">
+         <h1 style="font-size:20px;font-weight:bold;">Participants List</h1>
+         <div id="paticipants-list" style="font-size:16px;padding-top:2"> 
+         </div>
+         <script>
+            document.getElementById('paticipants-list').appendChild(getAllParticipants());
+         </script>
+      </div>
+      <div class="fixed-footer">
+         <div class="container" style="display:inline;padding-left: 12px;">Copyright @Pramati Technologies Pvt Ltd - 2020</div>
+         <div class="container" style="display:inline;float:right;padding-right:25px;">
+           <nav>
+	           <a href=#>Contact Us</a>	
+           </nav>
+         </div>
+      </div>
+      </head>
+      <body>
+   </body>
+</html>
